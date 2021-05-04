@@ -1,0 +1,35 @@
+.button {
+  align-items: center;
+  background: var(--red);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.8px;
+  min-height: 48px;
+  min-width: 180px;
+  outline: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media (min-width: 576px) {
+    display: inline-flex;
+    width: auto;
+  }
+
+  &__icon {
+    font-size: 10px;
+    margin-left: 0.75rem;
+  }
+
+  &:hover {
+    background-color: var(--red-200);
+  }
+}

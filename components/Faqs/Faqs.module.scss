@@ -1,0 +1,23 @@
+.faqs {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-600);
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 0;
+
+    &--bold {
+      color: var(--red);
+      font-weight: normal;
+      display: block;
+    }
+  }
+
+  &__imagen {
+    line-height: 0;
+  }
+}

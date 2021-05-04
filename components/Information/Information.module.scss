@@ -1,0 +1,152 @@
+@import "vars";
+
+.information {
+  min-height: 396px;
+
+  @media (min-width: 576px) {
+    min-height: inherit;
+  }
+
+  &__wrap {
+    color: var(--white);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 56px;
+
+    @media (min-width: 576px) {
+      height: 64px;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      background-color: var(--red-300);
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 56px;
+      width: 100%;
+      z-index: 1;
+
+      @media (min-width: 576px) {
+        top: 64px;
+        width: calc(50% + 31px);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    p {
+      margin-top: 4rem;
+      color: var(--pink);
+    }
+
+    p,
+    ul {
+      display: none;
+      font-family: $font-roboto;
+
+      @media (min-width: 576px) {
+        display: block;
+      }
+    }
+  }
+
+  &::before {
+    background-color: var(--red);
+    border-bottom-right-radius: 80px;
+    content: "";
+    height: 416px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+    transform: skew(0, 3deg);
+    width: 100%;
+
+    @media (min-width: 576px) {
+      left: -20px;
+      max-height: 80vh;
+      min-height: 608px;
+      transform: skew(-3deg, 0);
+      width: calc(50% + 40px);
+    }
+  }
+
+  &::after {
+    background-image: url("/static/assets/images/family.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 344px;
+    position: absolute;
+    right: -48px;
+    top: 56px;
+    width: 238px;
+
+    @media (min-width: 576px) {
+      height: 448px;
+      left: 50%;
+      right: auto;
+      top: 128px;
+      transform: translateX(-50%);
+      width: 320px;
+    }
+  }
+
+  &__none {
+    background-color: var(--red);
+    margin-left: -32px;
+    margin-right: -32px;
+    min-height: inherit;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    @media (min-width: 576px) {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      width: 376px;
+    }
+
+    &::before {
+      content: none;
+
+      @media (min-width: 576px) {
+        content: "";
+        min-height: 768px;
+        width: 376px;
+      }
+    }
+
+    &::after {
+      content: none;
+
+      @media (min-width: 576px) {
+        content: "";
+        left: 135px;
+        transform: none;
+      }
+    }
+
+    .information__header {
+      &::before {
+        width: 100%;
+
+        @media (min-width: 576px) {
+          width: 371px;
+        }
+      }
+    }
+  }
+}

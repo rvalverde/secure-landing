@@ -1,0 +1,32 @@
+@import "vars";
+
+.select {
+  border-radius: 4px;
+  border: 1px solid var(--gray-500);
+  min-height: 56px;
+  position: relative;
+  width: 100%;
+
+  select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-300);
+    font-weight: 400;
+    min-height: 56px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  &::before {
+    color: var(--red);
+    content: "\e904";
+    font-family: $font-icon;
+    font-size: 11px;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

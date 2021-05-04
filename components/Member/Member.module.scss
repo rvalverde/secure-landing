@@ -1,0 +1,126 @@
+.member {
+  border-collapse: collapse;
+  border: 0;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+
+  button {
+    background: transparent;
+    border: none;
+    color: var(--gray-900);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  th {
+    padding: 0;
+
+    &:last-child {
+      padding: 1rem;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid var(--gray-700);
+    font-weight: 400;
+    padding: 1rem;
+  }
+
+  &__option {
+    font-size: 12px;
+    font-weight: 400;
+    padding-right: 0 !important;
+    text-align: center;
+
+    i {
+      font-size: 20px;
+      cursor: pointer;
+
+      @media (min-width: 576px) {
+        display: none;
+      }
+
+      &.icon-plus {
+        font-size: 24px;
+      }
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: 576px) {
+        display: block;
+      }
+    }
+  }
+
+  &--resumen {
+    color: var(--gray-200);
+    margin-bottom: 2rem;
+
+    th,
+    td {
+      font-weight: 300;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    thead {
+      border-bottom: 1px solid var(--gray-600);
+      color: var(--gray-100);
+      font-size: 14px;
+
+      th {
+        padding-bottom: 1.5rem;
+        text-align: left;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      select {
+        border: none;
+        color: var(--gray-300);
+        font-size: 10px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+    }
+
+    td {
+      &:first-child {
+        font-weight: 400;
+      }
+
+      &:last-child {
+        font-size: 20px;
+        text-align: right;
+      }
+    }
+
+    tfoot {
+      border-top: 1px dashed var(--gray-300);
+      font-size: 12px;
+      text-transform: uppercase;
+
+      td {
+        &:first-child {
+          letter-spacing: 0.6px;
+        }
+
+        &:last-child {
+          font-size: 32px;
+          letter-spacing: -0.6px;
+        }
+      }
+    }
+  }
+}

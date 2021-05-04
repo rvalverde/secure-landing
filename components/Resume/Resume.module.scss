@@ -1,0 +1,57 @@
+.resume {
+  margin-bottom: 2rem;
+
+  table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    color: var(--gray-200);
+    margin: -25px 0 -10px;
+
+    td {
+      font-weight: 300;
+      padding: 15px 0;
+
+      &:first-child {
+        font-weight: 400;
+      }
+
+      &:last-child {
+        font-size: 20px;
+        text-align: right;
+      }
+    }
+
+    thead {
+      border-bottom: 1px solid var(--gray-600);
+      color: var(--gray-100);
+      font-size: 14px;
+
+      th {
+        padding-bottom: 1.5rem;
+        text-align: left;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    tfoot {
+      border-top: 1px dashed var(--gray-300);
+      font-size: 12px;
+      text-transform: uppercase;
+
+      td {
+        &:first-child {
+          letter-spacing: 0.6px;
+        }
+
+        &:last-child {
+          font-size: 32px;
+          letter-spacing: -0.6px;
+        }
+      }
+    }
+  }
+}

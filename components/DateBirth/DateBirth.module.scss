@@ -1,0 +1,9 @@
+@import "vars";
+
+.datebirth {
+  display: block;
+
+  &__calendar {
+    font-family: $font-lato;
+  }
+}

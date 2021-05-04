@@ -1,0 +1,48 @@
+.radio {
+  display: inline-flex;
+
+  &__input {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 8px;
+    margin-top: 2px;
+    position: relative;
+    width: 20px;
+  }
+
+  &__mark {
+    background-color: var(--white);
+    border-radius: 50%;
+    border: 1px solid var(--gray-500);
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease;
+    width: 100%;
+
+    &::before {
+      background-color: var(--green);
+      border-radius: 50%;
+      content: none;
+      height: 12px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+      width: 12px;
+    }
+
+    &__checked {
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
